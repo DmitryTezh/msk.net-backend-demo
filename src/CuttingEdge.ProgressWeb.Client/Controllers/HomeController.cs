@@ -31,5 +31,12 @@ namespace CuttingEdge.ProgressWeb.Client.Controllers
         {
             return View();
         }
+
+        public IActionResult Comment()
+        {
+            ViewData["Message"] = "Helow, React!";
+
+            return View();
+        }
     }
 }
