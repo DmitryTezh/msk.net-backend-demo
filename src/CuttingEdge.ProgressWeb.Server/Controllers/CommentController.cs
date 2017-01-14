@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using CollectionJson;
 using CuttingEdge.Patterns.Abstractions;
 using CuttingEdge.ProgressWeb.Entity;
 
@@ -25,6 +26,8 @@ namespace CuttingEdge.ProgressWeb.Server.Controllers
         [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Get()
         {
+            var doc = new ReadDocument();
+            
             return Json(_repo.Entities.OrderBy(r => r.Author).ToList());
         }
 

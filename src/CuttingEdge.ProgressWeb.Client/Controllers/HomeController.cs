@@ -1,13 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 
 namespace CuttingEdge.ProgressWeb.Client.Controllers
 {
     public class HomeController : Controller
     {
+        private IConfigurationRoot _config;
+
+        public HomeController(IConfigurationRoot config)
+        {
+            _config = config ?? throw new ArgumentNullException(nameof(config));
+        }
+
         public IActionResult Index()
         {
             return View();
