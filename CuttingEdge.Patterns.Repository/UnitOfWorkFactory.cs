@@ -4,7 +4,7 @@ using CuttingEdge.Patterns.Abstractions;
 
 namespace CuttingEdge.Patterns.Repository
 {
-    public class UnitOfWorkFactory<TDomain> : IUnitOfWorkFactory<TDomain> where TDomain : class, IDomain
+    public class UnitOfWorkFactory<TDomain> : IUnitOfWorkFactory<TDomain> where TDomain : class
     {
         private readonly DbContextOptions<EntityContext<TDomain>> _options;
 

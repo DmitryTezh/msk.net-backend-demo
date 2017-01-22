@@ -7,7 +7,7 @@ namespace CuttingEdge.Patterns.Abstractions
     /// Interface for repository of domain entities.
     /// </summary>
     /// <typeparam name="TEntity">Type for domain entity.</typeparam>
-    public interface IRepository<TEntity> where TEntity : class, IDomain
+    public interface IRepository<TEntity> where TEntity : class
     {
         /// <summary>
         /// Query entities from repository.

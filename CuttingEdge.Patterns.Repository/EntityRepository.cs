@@ -7,8 +7,8 @@ using CuttingEdge.Patterns.Abstractions;
 namespace CuttingEdge.Patterns.Repository
 {
     public class EntityRepository<TEntity, TDomain> : IRepository<TEntity> 
-        where TEntity : class, IDomain
-        where TDomain : class, IDomain
+        where TEntity : class
+        where TDomain : class
     {
         private readonly EntityContext<TDomain> _entityContext;
         private DbSet<TEntity> _entitySet;

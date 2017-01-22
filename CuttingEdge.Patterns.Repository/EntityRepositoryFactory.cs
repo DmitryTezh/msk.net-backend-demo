@@ -2,7 +2,7 @@
 
 namespace CuttingEdge.Patterns.Repository
 {
-    public class EntityRepositoryFactory<TDomain> : IRepositoryFactory<TDomain> where TDomain : class, IDomain
+    public class EntityRepositoryFactory<TDomain> : IRepositoryFactory<TDomain> where TDomain : class
     {
         public IRepository<TEnity> Create<TEnity>(IUnitOfWork<TDomain> unitOfWork) where TEnity : class, TDomain
         {

@@ -1,11 +1,10 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using CuttingEdge.Patterns.Abstractions;
 
 namespace CuttingEdge.Patterns.Repository
 {
-    public abstract class EntityConfiguration<TEntity> : EntityConfiguration where TEntity : class, IDomain
+    public abstract class EntityConfiguration<TEntity> : EntityConfiguration where TEntity : class
     {
         public abstract void Map(EntityTypeBuilder<TEntity> builder);
     }
@@ -18,7 +17,7 @@ namespace CuttingEdge.Patterns.Repository
     public static class ModelBuilderExtensions
     {
         public static void AddConfiguration<TEntity>(this ModelBuilder modelBuilder, EntityConfiguration<TEntity> configuration)
-            where TEntity : class, IDomain
+            where TEntity : class
         {
             configuration.Map(modelBuilder.Entity<TEntity>());
         }

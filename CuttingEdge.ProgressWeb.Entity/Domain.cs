@@ -1,15 +1,16 @@
-﻿using CuttingEdge.Patterns.Abstractions;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace CuttingEdge.ProgressWeb.Entity
 {
     /// <summary>
     /// Abstract domain entity in repository.
     /// </summary>
-    public abstract class Domain : IDomain
+    public abstract class Domain
     {
         /// <summary>
         /// Entity identifier.
         /// </summary>
+        [Key]
         public long Id { get; set; }
 
         /// <summary>

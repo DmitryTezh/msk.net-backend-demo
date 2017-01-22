@@ -2,11 +2,10 @@
 using System.Linq;
 using System.Reflection;
 using Microsoft.EntityFrameworkCore;
-using CuttingEdge.Patterns.Abstractions;
 
 namespace CuttingEdge.Patterns.Repository
 {
-    public class EntityContext<TDomain> : DbContext where TDomain : class, IDomain
+    public class EntityContext<TDomain> : DbContext where TDomain : class
     {
         public EntityContext(DbContextOptions<EntityContext<TDomain>> options) : base(options)
         {

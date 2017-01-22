@@ -4,7 +4,7 @@ using CuttingEdge.Patterns.Abstractions;
 
 namespace CuttingEdge.Patterns.Repository
 {
-    public class UnitOfWork<TDomain> : IUnitOfWork<TDomain> where TDomain : class, IDomain
+    public class UnitOfWork<TDomain> : IUnitOfWork<TDomain> where TDomain : class
     {
         private bool disposed;
 

@@ -3,22 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using CollectionJson;
 using CuttingEdge.Patterns.Abstractions;
 using CuttingEdge.ProgressWeb.Entity;
 
 namespace CuttingEdge.ProgressWeb.Server.Controllers
 {
     [Route("api/[controller]")]
-    public class CommentController : Controller
+    public class CommentController : RepositoryController<Comment>
     {
-        private IUnitOfWork<Domain> _uof;
-        private IRepository<Comment> _repo;
-
-        public CommentController(IUnitOfWork<Domain> uof, IRepositoryFactory<Domain> repos)
+        public CommentController(IUnitOfWork<Domain> uof, IRepositoryFactory<Domain> repos) : base(uof, repos)
         {
-            _uof = uof ?? throw new ArgumentException(nameof(uof));
-            _repo = (repos ?? throw new ArgumentException(nameof(repos))).Create<Comment>(_uof);
         }
 
         // GET api/values
@@ -26,45 +20,43 @@ namespace CuttingEdge.ProgressWeb.Server.Controllers
         [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Get()
         {
-            var doc = new ReadDocument();
-            
-            return Json(_repo.Entities.OrderBy(r => r.Author).ToList());
+            return Json(Repository.Entities.OrderBy(r => r.Author).ToList());
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
         [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Get(int id)
+        public IActionResult Get(long id)
         {
-            return Json(_repo.GetById(id));
+            return Json(Repository.GetById(id));
         }
 
         // POST api/values
         [HttpPost]
         public IActionResult Post(Comment value)
         {
-            _repo.Insert(value);
-            _uof.Save();
+            Repository.Insert(value);
+            SaveChanges();
 
             return Json(value);
         }
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody]Comment value)
+        public IActionResult Put(long id, [FromBody]Comment value)
         {
-            _repo.Update(value);
-            _uof.Save();
+            Repository.Update(value);
+            SaveChanges();
 
             return Json(value);
         }
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public void Delete(long id)
         {
-            _repo.Delete(id);
-            _uof.Save();
+            Repository.Delete(id);
+            SaveChanges();
         }
     }
 }

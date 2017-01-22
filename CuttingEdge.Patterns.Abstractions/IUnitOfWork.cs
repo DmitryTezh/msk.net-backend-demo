@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace CuttingEdge.Patterns.Abstractions
 {
-    public interface IUnitOfWork<TDomain> : IDisposable where TDomain: class, IDomain
+    public interface IUnitOfWork<TDomain> : IDisposable where TDomain: class
     {
         /// <summary>
         /// Save changes in repository.

@@ -74,7 +74,6 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\CuttingEdge.Patterns.Abstractions\CuttingEdge.Patterns.Abstractions.csproj" />
     <ProjectReference Include="..\..\CuttingEdge.ProgressWeb.Entity\CuttingEdge.ProgressWeb.Entity.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
