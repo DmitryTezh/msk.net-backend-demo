@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using CuttingEdge.Patterns.Abstractions;
 using CuttingEdge.ProgressWeb.Entity;
 using CuttingEdge.Patterns.Repository;
+using CuttingEdge.Patterns.View;
 
 namespace CuttingEdge.ProgressWeb.Server
 {
@@ -34,6 +35,9 @@ namespace CuttingEdge.ProgressWeb.Server
             // Enable cross-origin services.
             services.AddCors();
 
+            // Add options services.
+            services.AddOptions();
+            
             // Add Entity Framework services.
             services.AddEntityFramework();
             services.AddEntityFrameworkSqlServer();
@@ -51,6 +55,10 @@ namespace CuttingEdge.ProgressWeb.Server
 
             // Add unit of work service.
             services.AddScoped(sp => sp.GetService<IUnitOfWorkFactory<Domain>>().Create());
+
+            // Add view manager service.
+            services.Configure<EntityViewManagerSettings>(Configuration.GetSection("EntityViewManagerSettings"));
+            services.AddSingleton<IViewManager<EntityView>, EntityViewManager<EntityView>>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

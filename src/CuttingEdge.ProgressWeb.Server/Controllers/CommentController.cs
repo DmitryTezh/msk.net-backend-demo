@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CuttingEdge.Patterns.Abstractions;
+using CuttingEdge.Patterns.View;
 using CuttingEdge.ProgressWeb.Entity;
 
 namespace CuttingEdge.ProgressWeb.Server.Controllers
@@ -11,7 +12,7 @@ namespace CuttingEdge.ProgressWeb.Server.Controllers
     [Route("api/[controller]")]
     public class CommentController : RepositoryController<Comment>
     {
-        public CommentController(IUnitOfWork<Domain> uof, IRepositoryFactory<Domain> repos) : base(uof, repos)
+        public CommentController(IUnitOfWork<Domain> uof, IRepositoryFactory<Domain> repos, IViewManager<EntityView> viewer) : base(uof, repos, viewer)
         {
         }
 

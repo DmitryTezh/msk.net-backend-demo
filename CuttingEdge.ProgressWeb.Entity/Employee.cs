@@ -1,11 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace CuttingEdge.ProgressWeb.Entity
+﻿namespace CuttingEdge.ProgressWeb.Entity
 {
     public class Employee : Domain
     {
-        [Required]
-        [Display(Name = "Email", Prompt = "Employee email")]
         public string Email { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

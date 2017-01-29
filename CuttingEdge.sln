@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.25928.0
+VisualStudioVersion = 15.0.26020.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CBF23508-0AD2-45E3-96DB-5F21AAB8E8EF}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuttingEdge.Patterns.Repository", "CuttingEdge.Patterns.Repository\CuttingEdge.Patterns.Repository.csproj", "{484485EE-E6DD-4517-A11C-5E159DC03764}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuttingEdge.ProgressWeb.Entity", "CuttingEdge.ProgressWeb.Entity\CuttingEdge.ProgressWeb.Entity.csproj", "{4887DFB2-35B0-4AEA-9FE5-4377AFA523D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuttingEdge.Patterns.View", "CuttingEdge.Patterns.View\CuttingEdge.Patterns.View.csproj", "{42ACDEF9-7639-4B38-965C-9B620A4D3998}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{4887DFB2-35B0-4AEA-9FE5-4377AFA523D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4887DFB2-35B0-4AEA-9FE5-4377AFA523D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4887DFB2-35B0-4AEA-9FE5-4377AFA523D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42ACDEF9-7639-4B38-965C-9B620A4D3998}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42ACDEF9-7639-4B38-965C-9B620A4D3998}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42ACDEF9-7639-4B38-965C-9B620A4D3998}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42ACDEF9-7639-4B38-965C-9B620A4D3998}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -61,11 +61,11 @@
   <ItemGroup>
     <ProjectReference Include="..\..\CuttingEdge.Patterns.Abstractions\CuttingEdge.Patterns.Abstractions.csproj" />
     <ProjectReference Include="..\..\CuttingEdge.Patterns.Repository\CuttingEdge.Patterns.Repository.csproj" />
+    <ProjectReference Include="..\..\CuttingEdge.Patterns.View\CuttingEdge.Patterns.View.csproj" />
     <ProjectReference Include="..\..\CuttingEdge.ProgressWeb.Entity\CuttingEdge.ProgressWeb.Entity.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

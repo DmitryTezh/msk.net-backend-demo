@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CollectionJson;
 using CuttingEdge.Patterns.Abstractions;
+using CuttingEdge.Patterns.View;
 using CuttingEdge.ProgressWeb.Entity;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -15,7 +16,7 @@ namespace CuttingEdge.ProgressWeb.Server.Controllers
     [Route("api/[controller]", Name = nameof(Employee))]
     public class EmployeeController : RepositoryController<Employee>
     {
-        public EmployeeController(IUnitOfWork<Domain> uof, IRepositoryFactory<Domain> repos) : base(uof, repos)
+        public EmployeeController(IUnitOfWork<Domain> uof, IRepositoryFactory<Domain> repos, IViewManager<EntityView> viewer) : base(uof, repos, viewer)
         {
         }
 

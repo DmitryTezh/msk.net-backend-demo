@@ -26,7 +26,7 @@ namespace CuttingEdge.ProgressWeb.Client
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton(_ => Configuration);
+            services.AddSingleton(Configuration);
             services.AddSingleton(sp => new JsonHelper(Configuration["AppServer:Url"]));
 
             // Add React services.
