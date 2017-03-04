@@ -67,6 +67,15 @@ namespace CuttingEdge.ProgressWeb.Server
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+            }
+
             app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowCredentials());
             app.UseMvc();
         }
