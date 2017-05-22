@@ -1,10 +1,10 @@
 ﻿using System;
 using CuttingEdge.Patterns.Repository;
-using CuttingEdge.ProgressWeb.Entity;
+using CuttingEdge.DemoWeb.Entity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace CuttingEdge.ProgressWeb.Server.Mapping
+namespace CuttingEdge.DemoWeb.Server.Mapping
 {
     public class CommentMap : EntityConfiguration<Comment>
     {

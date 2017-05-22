@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CuttingEdge.ProgressWeb.Entity
+namespace CuttingEdge.DemoWeb.Entity
 {
     /// <summary>
     /// Abstract domain entity in repository.

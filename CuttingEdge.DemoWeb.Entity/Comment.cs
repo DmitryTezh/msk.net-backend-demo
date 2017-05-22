@@ -1,4 +1,4 @@
-﻿namespace CuttingEdge.ProgressWeb.Entity
+﻿namespace CuttingEdge.DemoWeb.Entity
 {
     public class Comment : Domain
     {

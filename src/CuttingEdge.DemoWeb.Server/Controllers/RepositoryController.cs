@@ -6,11 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using CollectionJson;
 using CuttingEdge.Patterns.Abstractions;
 using CuttingEdge.Patterns.View;
-using CuttingEdge.ProgressWeb.Entity;
+using CuttingEdge.DemoWeb.Entity;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace CuttingEdge.ProgressWeb.Server.Controllers
+namespace CuttingEdge.DemoWeb.Server.Controllers
 {
     public abstract class RepositoryController<TEntity> : Controller where TEntity : Domain
     {

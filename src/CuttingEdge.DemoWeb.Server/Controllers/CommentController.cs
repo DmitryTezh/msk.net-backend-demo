@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CuttingEdge.Patterns.Abstractions;
 using CuttingEdge.Patterns.View;
-using CuttingEdge.ProgressWeb.Entity;
+using CuttingEdge.DemoWeb.Entity;
 
-namespace CuttingEdge.ProgressWeb.Server.Controllers
+namespace CuttingEdge.DemoWeb.Server.Controllers
 {
     [Route("api/[controller]")]
     public class CommentController : RepositoryController<Comment>

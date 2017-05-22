@@ -6,11 +6,11 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using CuttingEdge.Patterns.Abstractions;
-using CuttingEdge.ProgressWeb.Entity;
+using CuttingEdge.DemoWeb.Entity;
 using CuttingEdge.Patterns.Repository;
 using CuttingEdge.Patterns.View;
 
-namespace CuttingEdge.ProgressWeb.Server
+namespace CuttingEdge.DemoWeb.Server
 {
     public class Startup
     {
@@ -57,8 +57,8 @@ namespace CuttingEdge.ProgressWeb.Server
             services.AddScoped(sp => sp.GetService<IUnitOfWorkFactory<Domain>>().Create());
 
             // Add view manager service.
-            services.Configure<EntityViewManagerSettings>(Configuration.GetSection("EntityViewManagerSettings"));
-            services.AddSingleton<IViewManager<EntityView>, EntityViewManager<EntityView>>();
+            //services.Configure<EntityViewManagerSettings>(Configuration.GetSection("EntityViewManagerSettings"));
+            //services.AddSingleton<IViewManager<EntityView>, EntityViewManager<EntityView>>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

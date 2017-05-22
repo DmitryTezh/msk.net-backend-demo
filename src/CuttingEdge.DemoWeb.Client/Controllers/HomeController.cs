@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 
-namespace CuttingEdge.ProgressWeb.Client.Controllers
+namespace CuttingEdge.DemoWeb.Client.Controllers
 {
     public class HomeController : Controller
     {

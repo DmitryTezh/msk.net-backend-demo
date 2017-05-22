@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 using CuttingEdge.ProgressWeb.Client.Helpers;
 using React.AspNet;
 
-namespace CuttingEdge.ProgressWeb.Client
+namespace CuttingEdge.DemoWeb.Client
 {
     public class Startup
     {

@@ -1,19 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26020.0
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CBF23508-0AD2-45E3-96DB-5F21AAB8E8EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuttingEdge.ProgressWeb.Client", "src\CuttingEdge.ProgressWeb.Client\CuttingEdge.ProgressWeb.Client.csproj", "{C7989CD4-DE57-4B8D-A38A-D7F0820E6A3F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuttingEdge.DemoWeb.Client", "src\CuttingEdge.DemoWeb.Client\CuttingEdge.DemoWeb.Client.csproj", "{C7989CD4-DE57-4B8D-A38A-D7F0820E6A3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuttingEdge.ProgressWeb.Server", "src\CuttingEdge.ProgressWeb.Server\CuttingEdge.ProgressWeb.Server.csproj", "{DF5AE302-976B-49C2-B805-13B4D36FAB86}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuttingEdge.DemoWeb.Server", "src\CuttingEdge.DemoWeb.Server\CuttingEdge.DemoWeb.Server.csproj", "{DF5AE302-976B-49C2-B805-13B4D36FAB86}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuttingEdge.Patterns.Abstractions", "CuttingEdge.Patterns.Abstractions\CuttingEdge.Patterns.Abstractions.csproj", "{BE30159B-838F-4F4D-B2FB-96BEB76FCAA1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuttingEdge.Patterns.Repository", "CuttingEdge.Patterns.Repository\CuttingEdge.Patterns.Repository.csproj", "{484485EE-E6DD-4517-A11C-5E159DC03764}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuttingEdge.ProgressWeb.Entity", "CuttingEdge.ProgressWeb.Entity\CuttingEdge.ProgressWeb.Entity.csproj", "{4887DFB2-35B0-4AEA-9FE5-4377AFA523D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuttingEdge.DemoWeb.Entity", "CuttingEdge.DemoWeb.Entity\CuttingEdge.DemoWeb.Entity.csproj", "{4887DFB2-35B0-4AEA-9FE5-4377AFA523D7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuttingEdge.Patterns.View", "CuttingEdge.Patterns.View\CuttingEdge.Patterns.View.csproj", "{42ACDEF9-7639-4B38-965C-9B620A4D3998}"
 EndProject

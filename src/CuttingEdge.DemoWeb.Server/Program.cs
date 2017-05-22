@@ -4,8 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Builder;
 
-namespace CuttingEdge.ProgressWeb.Client
+namespace CuttingEdge.DemoWeb.Server
 {
     public class Program
     {
