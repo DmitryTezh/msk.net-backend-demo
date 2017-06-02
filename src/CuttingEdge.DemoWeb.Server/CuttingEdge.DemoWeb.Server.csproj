@@ -10,7 +10,6 @@
     <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="CollectionJson" Version="0.8.0" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="1.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="1.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="1.1.0" />
@@ -32,7 +31,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\CuttingEdge.Patterns.Abstractions\CuttingEdge.Patterns.Abstractions.csproj" />
     <ProjectReference Include="..\..\CuttingEdge.Patterns.Repository\CuttingEdge.Patterns.Repository.csproj" />
-    <ProjectReference Include="..\..\CuttingEdge.Patterns.View\CuttingEdge.Patterns.View.csproj" />
     <ProjectReference Include="..\..\CuttingEdge.DemoWeb.Entity\CuttingEdge.DemoWeb.Entity.csproj" />
   </ItemGroup>
   <ItemGroup>

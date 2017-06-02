@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CuttingEdge.Patterns.Abstractions;
-using CuttingEdge.Patterns.View;
 using CuttingEdge.DemoWeb.Entity;
 
 namespace CuttingEdge.DemoWeb.Server.Controllers
@@ -12,7 +11,7 @@ namespace CuttingEdge.DemoWeb.Server.Controllers
     [Route("api/[controller]")]
     public class TodoController : RepositoryController<TodoItem>
     {
-        public TodoController(IUnitOfWork<Domain> uof, IRepositoryFactory<Domain> repos, IViewManager<EntityView> viewer) : base(uof, repos, viewer)
+        public TodoController(IUnitOfWork<Domain> uof, IRepositoryFactory<Domain> repos) : base(uof, repos)
         {
         }
 
@@ -44,12 +43,25 @@ namespace CuttingEdge.DemoWeb.Server.Controllers
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public IActionResult Put(long id, [FromBody]TodoItem value)
+        public IActionResult Put(long id, TodoItem value)
         {
             Repository.Update(value);
             SaveChanges();
 
             return Json(value);
+        }
+
+        // PATCH api/values/5
+        [HttpPatch("{id}")]
+        public IActionResult Patch(long id)
+        {
+            var item = Repository.GetById(id);
+            item.Completed = !item.Completed;
+
+            Repository.Update(item);
+            SaveChanges();
+
+            return Json(item);
         }
 
         // DELETE api/values/5

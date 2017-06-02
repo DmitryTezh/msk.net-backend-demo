@@ -8,7 +8,6 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using CuttingEdge.Patterns.Abstractions;
 using CuttingEdge.DemoWeb.Entity;
 using CuttingEdge.Patterns.Repository;
-using CuttingEdge.Patterns.View;
 
 namespace CuttingEdge.DemoWeb.Server
 {
@@ -55,10 +54,6 @@ namespace CuttingEdge.DemoWeb.Server
 
             // Add unit of work service.
             services.AddScoped(sp => sp.GetService<IUnitOfWorkFactory<Domain>>().Create());
-
-            // Add view manager service.
-            //services.Configure<EntityViewManagerSettings>(Configuration.GetSection("EntityViewManagerSettings"));
-            //services.AddSingleton<IViewManager<EntityView>, EntityViewManager<EntityView>>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -76,7 +71,7 @@ namespace CuttingEdge.DemoWeb.Server
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowCredentials());
+            app.UseCors(options => options.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().AllowCredentials());
             app.UseMvc();
         }
     }
